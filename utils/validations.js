@@ -9,7 +9,7 @@ module.exports.validateRegisterInput = (
     errors.username = "Username should not be empty";
   }
   if (email.trim() === "") {
-    errors.email === "Email should not be empty";
+    errors.email = "Email should not be empty";
   } else {
     const regEx = /^([0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$/;
     if (!email.match(regEx)) {
@@ -19,7 +19,7 @@ module.exports.validateRegisterInput = (
   if (password === "") {
     errors.password = "Pasword must not be empty";
   } else if (password !== confirmPassword) {
-    errors.confirmPasswod = "Passwords do not match";
+    errors.confirmPassword = "Passwords do not match";
   }
 
   return {
