@@ -6,6 +6,7 @@ import { AuthContext } from "../context/auth";
 function AuthRoute({ component: Component, ...rest }) {
   const { user } = useContext(AuthContext);
 
+  console.log(`user variable: ${user}`);
   return (
     <Route
       {...rest}
